@@ -44,7 +44,6 @@ jobs:
           aws cloudformation deploy \
             --template-file .github/workflows/pipeline.yml \
             --stack-name my-vite-react-stack \
-            --capabilities CAPABILITY_NAMED_IAM \
-            --parameter-overrides BuildArtifactUrl="https://s3.amazonaws.com/$S3_BUCKET_NAME/index.html"
+            --capabilities CAPABILITY_NAMED_IAM
         env:
           S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
