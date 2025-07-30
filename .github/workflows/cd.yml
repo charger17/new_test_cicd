@@ -42,7 +42,7 @@ jobs:
       - name: Deploy infrastructure with CloudFormation
         run: |
           aws cloudformation deploy \
-            --template-file pipeline.yml \
+            --template-file ${{ github.workspace }}/pipeline.yml \
             --stack-name my-vite-react-stack \
             --capabilities CAPABILITY_NAMED_IAM
         env:
