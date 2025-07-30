@@ -1,11 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: Infraestructura para despliegue de app Vite React en S3
 
-Parameters:
-  BuildArtifactUrl:
-    Type: String
-    Description: URL del artefacto build.zip en S3
-
 Resources:
   StaticSiteBucket:
     Type: AWS::S3::Bucket
